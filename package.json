@@ -122,19 +122,19 @@
       "prettier/prettier": [
         "error",
         {
-            "semi": false,
-            "useTabs": false,
-            "tabWidth": 2,
-            "printWidth": 80,
-            "quoteProps": "as-needed",
-            "endOfLine": "lf",
-            "bracketSpacing": true,
-            "jsxBracketSameLine": false,
-            "jsxSingleQuote": false,
-            "singleQuote": true,
-            "trailingComma": "all",
-            "arrowParens": "avoid"
-          }
+          "semi": false,
+          "useTabs": false,
+          "tabWidth": 2,
+          "printWidth": 80,
+          "quoteProps": "as-needed",
+          "endOfLine": "lf",
+          "bracketSpacing": true,
+          "jsxBracketSameLine": false,
+          "jsxSingleQuote": false,
+          "singleQuote": true,
+          "trailingComma": "all",
+          "arrowParens": "avoid"
+        }
       ]
     }
   },
@@ -142,13 +142,6 @@
     "node_modules/",
     "lib/"
   ],
-  "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
-  },
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",

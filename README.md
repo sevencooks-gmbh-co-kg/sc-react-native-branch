@@ -5,17 +5,64 @@
 ## Installation
 
 ```sh
-npm install sc-react-native-branch
+yarn add @sevencooks/react-native-branch
+```
+
+## Linking
+
+### >= 0.60
+
+Autolinking will just do the job.
+
+### < 0.60
+
+#### Mostly automatic
+
+```sh
+react-native link @sevencooks/react-native-branch
+```
+
+## Setup
+
+### Android
+
+#### `android/app/src/main/.../MainApplication.java`
+
+Add `import com.sevencooks.rnbranch`
+
+Add `RNBranchModule.initBranch(this)` in your `onCreate` method.
+
+```java
+@Override
+public void onCreate() {
+  super.onCreate();
+  // Add this
+  RNBranchModule.initBranch(this);
+}
 ```
 
 ## Usage
 
-```js
-import ScReactNativeBranch from "sc-react-native-branch";
+```typescript
+import Branch from '@sevencooks/react-native-branch';
 
-// ...
+// Anywhere in your most top component e.g. App.js
+React.useEffect(() => Branch.initSession(), []);
 
-const result = await ScReactNativeBranch.multiply(3, 7);
+// Subscribe to events
+Branch.subscribe(({ params, error }) => {
+  console.log({ params, error });
+});
+
+// Get latest deep link params
+const params = await Branch.getLatestReferringParams();
+
+// create a new shortLink
+const url = await Branch.generateShortUrl(
+  branchUniversalOpjectData,
+  linkProperties
+);
+// See https://help.branch.io/developers-hub/docs/native-sdks-overview for further instructions.
 ```
 
 ## Contributing
