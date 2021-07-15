@@ -1,18 +1,16 @@
 import * as React from 'react'
 
 import { StyleSheet, View, Text } from 'react-native'
-import ScReactNativeBranch from 'sc-react-native-branch'
+import Branch from '@sevencooks/react-native-branch'
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>()
-
   React.useEffect(() => {
-    ScReactNativeBranch.multiply(3, 7).then(setResult)
+    Branch.initSession()
   }, [])
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Hello Branch</Text>
     </View>
   )
 }

@@ -10,7 +10,7 @@ import com.facebook.react.ReactInstanceManager;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import com.screactnativebranch.ScReactNativeBranchPackage;
+import com.sevencooks.rnbranch;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -27,7 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for ScReactNativeBranchExample:
           // packages.add(new MyReactNativePackage());
-          packages.add(new ScReactNativeBranchPackage());
+          packages.add(new RNBranchPackage());
           return packages;
         }
 
@@ -47,6 +47,8 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager()); // Remove this line if you don't want Flipper enabled
+    RNBranch.enableDebug();
+    RNBranch.initBranch();
   }
 
   /**
