@@ -1,4 +1,4 @@
-package com.screactnativebranch
+package com.sevencooks.rnbranch
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule

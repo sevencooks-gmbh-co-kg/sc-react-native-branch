@@ -1,4 +1,4 @@
-package com.screactnativebranch
+package com.sevencooks.rnbranch
 
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
@@ -15,10 +15,10 @@ class ScReactNativeBranchModule(reactContext: ReactApplicationContext) : ReactCo
     // See https://reactnative.dev/docs/native-modules-android
     @ReactMethod
     fun multiply(a: Int, b: Int, promise: Promise) {
-    
+
       promise.resolve(a * b)
-    
+
     }
 
-    
+
 }
