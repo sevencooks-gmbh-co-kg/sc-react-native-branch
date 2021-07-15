@@ -1,6 +1,6 @@
 # sc-react-native-branch
 
-"Sevencooks Branch SDK for React Native
+Sevencooks Branch SDK for React Native
 
 ## Installation
 
@@ -44,24 +44,24 @@ public void onCreate() {
 ## Usage
 
 ```typescript
-import Branch from '@sevencooks/react-native-branch';
+import Branch from '@sevencooks/react-native-branch'
 
 // Anywhere in your most top component e.g. App.js
-React.useEffect(() => Branch.initSession(), []);
+React.useEffect(() => Branch.initSession(), [])
 
 // Subscribe to events
 Branch.subscribe(({ params, error }) => {
-  console.log({ params, error });
-});
+  console.log({ params, error })
+})
 
 // Get latest deep link params
-const params = await Branch.getLatestReferringParams();
+const params = await Branch.getLatestReferringParams()
 
 // create a new shortLink
 const url = await Branch.generateShortUrl(
   branchUniversalOpjectData,
-  linkProperties
-);
+  linkProperties,
+)
 // See https://help.branch.io/developers-hub/docs/native-sdks-overview for further instructions.
 ```
 
