@@ -1,7 +1,7 @@
 {
   "name": "sc-react-native-branch",
   "version": "0.1.0",
-  "description": ""Sevencooks Branch SDK for React Native",
+  "description": "Sevencooks Branch SDK for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",

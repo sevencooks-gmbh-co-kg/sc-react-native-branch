@@ -1,6 +1,6 @@
 # sc-react-native-branch
 
-"Sevencooks Branch SDK for React Native
+Sevencooks Branch SDK for React Native
 
 ## Installation
 
