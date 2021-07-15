@@ -1,9 +1,7 @@
 import { NativeModules } from 'react-native'
 
-type ScReactNativeBranchType = {
-  multiply(a: number, b: number): Promise<number>
-}
+interface Branch {}
 
-const { ScReactNativeBranch } = NativeModules
+const { RNBranch } = NativeModules
 
-export default ScReactNativeBranch as ScReactNativeBranchType
+export default RNBranch as Branch

@@ -114,7 +114,7 @@ repositories {
   }
 
   if (!found) {
-    throw new GradleException
+    throw new GradleException(
             "${project.name}: unable to locate React Native android sources. " +
                     "Ensure you have you installed React Native as a dependency in your project and try again."
     )
@@ -127,4 +127,5 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'io.branch.sdk.android:library:5.0.9'
 }
