@@ -2,5 +2,5 @@ rootProject.name = 'ScReactNativeBranchExample'
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
 
-include ':screactnativebranch'
-project(':screactnativebranch').projectDir = new File(rootProject.projectDir, '../../android')
+include ':sevencooks.rnbranch'
+project(':sevencooks.rnbranch').projectDir = new File(rootProject.projectDir, '../../android')

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "sc-react-native-branch": ["./src/index"]
+      "@sevencooks/react-native-branch": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
