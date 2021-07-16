@@ -15,5 +15,12 @@ Pod::Spec.new do |s|
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
+  # https://blog.cocoapods.org/CocoaPods-1.5.0/
+  s.pod_target_xcconfig = {
+    'DEFINES_MODULE' => 'YES'
+  }
+
+  # TODO: figure this out
+  s.dependency 'Branch', '1.39.2'
   s.dependency "React-Core"
 end
