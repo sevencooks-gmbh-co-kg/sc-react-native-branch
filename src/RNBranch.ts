@@ -6,7 +6,7 @@ import type {
   LinkProperties,
 } from './types'
 
-interface RNBranch {
+interface RNBranchT {
   INIT_SESSION_FINISHED: string
   initSession: () => void
   getFirstReferringParams: () => Promise<BranchParams>
@@ -16,21 +16,21 @@ interface RNBranch {
     linkProperties: LinkProperties,
   ) => Promise<string>
 }
-const SCBranch: RNBranch = NativeModules.SCBranch
+const RNBranch: RNBranchT = NativeModules.RNBranch
 
 export const Branch = {
-  initSession: SCBranch.initSession,
-  getLatestReferringParams: SCBranch.getLatestReferringParams,
-  getFirstReferringParams: SCBranch.getFirstReferringParams,
+  initSession: RNBranch.initSession,
+  getLatestReferringParams: RNBranch.getLatestReferringParams,
+  getFirstReferringParams: RNBranch.getFirstReferringParams,
   subscribe: (cb: BranchCallback) => {
     const eventEmitter = new NativeEventEmitter(NativeModules.SCBranch)
     const listener = eventEmitter.addListener(
-      SCBranch.INIT_SESSION_FINISHED,
+      RNBranch.INIT_SESSION_FINISHED,
       cb,
     )
     return () => {
       listener.remove()
     }
   },
-  generateShortUrl: SCBranch.generateShortUrl,
+  generateShortUrl: RNBranch.generateShortUrl,
 }

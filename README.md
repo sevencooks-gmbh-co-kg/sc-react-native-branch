@@ -28,7 +28,7 @@ react-native link @sevencooks/react-native-branch
 
 #### `android/app/src/main/.../MainApplication.java`
 
-Add `import com.sevencooks.rnbranch`
+Add `import com.sevencooks.rnbranch.*`
 
 Add `RNBranchModule.initBranch(this)` in your `onCreate` method.
 
