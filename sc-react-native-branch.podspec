@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/NehrDani/sc-react-native-branch.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
+  s.dependency 'Branch', '1.39.2'
 
   s.dependency "React-Core"
 end

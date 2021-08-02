@@ -9,6 +9,7 @@ target 'ScReactNativeBranchExample' do
   use_react_native!(:path => config["reactNativePath"])
 
   pod 'sc-react-native-branch', :path => '../..'
+  pod 'Branch', :modular_headers => true 
 
   # Enables Flipper.
   #
