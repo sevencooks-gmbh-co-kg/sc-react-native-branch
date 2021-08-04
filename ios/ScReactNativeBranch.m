@@ -7,7 +7,7 @@
 
 #import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_REMAP_MODULE(SCBranch, SCBranchManager, NSObject)
+@interface RCT_EXTERN_REMAP_MODULE(RNBranch, SCBranchManager, NSObject)
 
 RCT_EXTERN_METHOD(initSession);
 
