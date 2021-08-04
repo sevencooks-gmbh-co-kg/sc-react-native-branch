@@ -1,18 +1,22 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import ScReactNativeBranch from 'sc-react-native-branch';
+import { StyleSheet, View, Text, Button } from 'react-native';
+// import ScReactNativeBranch from 'sc-react-native-branch';
+import { NativeModules } from 'react-native';
+const { SCBranch } = NativeModules
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
 
-  React.useEffect(() => {
-    ScReactNativeBranch.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
       <Text>Result: {result}</Text>
+      <Button title="test" onPress={() => {
+
+    console.log({SCBranch})
+    SCBranch.validateSDKIntegration()
+    // ScReactNativeBranch.validateSDKIntegration()// .then(setResult);
+      }} />
     </View>
   );
 }
