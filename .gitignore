@@ -61,3 +61,5 @@ lib/
 
 
 Config.xcconfig
+# env
+.env

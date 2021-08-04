@@ -1,6 +1,6 @@
 {
-  "name": "sc-react-native-branch-example",
-  "description": "Example app for sc-react-native-branch",
+  "name": "react-native-branch-example",
+  "description": "Example app for @sevencooks/react-native-branch",
   "version": "0.0.1",
   "private": true,
   "scripts": {
