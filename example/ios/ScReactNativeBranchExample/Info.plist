@@ -53,5 +53,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>branch_key</key>
+	<string>$(BRANCH_KEY)</string>
+	<key>branch_universal_link_domains</key>
+	<string>$(BRANCH_MAIN_DOMAIN)</string>
 </dict>
 </plist>
