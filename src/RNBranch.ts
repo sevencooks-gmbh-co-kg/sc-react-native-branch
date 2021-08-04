@@ -23,7 +23,7 @@ export const Branch = {
   getLatestReferringParams: RNBranch.getLatestReferringParams,
   getFirstReferringParams: RNBranch.getFirstReferringParams,
   subscribe: (cb: BranchCallback) => {
-    const eventEmitter = new NativeEventEmitter(NativeModules.SCBranch)
+    const eventEmitter = new NativeEventEmitter(NativeModules.RNBranch)
     const listener = eventEmitter.addListener(
       RNBranch.INIT_SESSION_FINISHED,
       cb,
