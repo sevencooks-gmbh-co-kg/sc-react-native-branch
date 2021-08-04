@@ -55,6 +55,15 @@ To edit the Objective-C files, open `example/ios/ScReactNativeBranchExample.xcwo
 
 To edit the Kotlin files, open `example/android` in Android studio and find the source files at `screactnativebranch` under `Android`.
 
+### Setup example project
+
+Create a file called Config.xcconfig in XCode fill it with the following variables
+
+```
+BRANCH_KEY = key_test_xxxxxxxxx
+BRANCH_MAIN_DOMAIN = link.example.eu
+```
+
 ### Commit message convention
 
 We follow the [conventional commits specification](https://www.conventionalcommits.org/en) for our commit messages:
