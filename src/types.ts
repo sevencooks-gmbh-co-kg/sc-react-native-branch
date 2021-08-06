@@ -12,8 +12,10 @@ export interface BranchParams {
   '+referrer'?: string
   '+is_first_session': boolean
   '+clicked_branch_link': boolean
+  '+non_branch_link'?: string
   '+url'?: string
   $canonical_url?: string
+  $deeplink_path?: string
   [data: string]: AnyDataType | AnyDataType[] | Record<string, AnyDataType>
 }
 
@@ -35,5 +37,5 @@ export interface LinkProperties {
   [param: string]: AnyDataType | AnyDataType[]
 }
 export interface BranchCallback {
-  (result: { error: Error | null; params: BranchParams | null }): void
+  (result: { error: string | null; params: BranchParams | null }): void
 }
